@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Wisata Gunung'),
+          title: const Text('Wisata Gunung di Batu'),
         ),
         body: const MyHomePage(),
       ),
@@ -30,15 +30,15 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // Widget titleSection yang berisi struktur Row dan Column untuk title
     Widget titleSection = Container(
-      padding: const EdgeInsets.all(32),
+      padding: const EdgeInsets.all(32), // padding 32 untuk seluruh Row
       child: Row(
         children: [
           Expanded(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start, // Column di-align ke awal baris
               children: [
                 Container(
-                  padding: const EdgeInsets.only(bottom: 8),
+                  padding: const EdgeInsets.only(bottom: 8), // padding 8 untuk teks pertama
                   child: const Text(
                     'Wisata Gunung di Batu',
                     style: TextStyle(
@@ -49,7 +49,7 @@ class MyHomePage extends StatelessWidget {
                 const Text(
                   'Batu, Malang, Indonesia',
                   style: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.grey, // warna abu-abu untuk teks kedua
                   ),
                 ),
               ],
@@ -57,7 +57,7 @@ class MyHomePage extends StatelessWidget {
           ),
           const Icon(
             Icons.star,
-            color: Colors.red,
+            color: Colors.red, // ikon bintang berwarna merah
           ),
           const Text('41'),
         ],
@@ -66,7 +66,7 @@ class MyHomePage extends StatelessWidget {
 
     return ListView(
       children: [
-        titleSection,
+        titleSection, // mengganti body dengan titleSection
       ],
     );
   }
